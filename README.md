@@ -3,6 +3,9 @@ for coursework-----use m5stack and openclaw
 
 # M5Stack Data Integration with OpenClaw via WeChat
 
+## dingtalk kanban
+[https://www.teambition.com/project/69cdd45fcfcd439e91ac8814/tasks/view/69cdd460f8de99742f38bbdf]
+
 ## Project Overview
 
 We plan to integrate M5Stack sensor data with OpenClaw to enable plant humidity monitoring through WeChat. This architecture allows users to access real-time sensor data through a conversational AI interface while maintaining extensibility for future features.
