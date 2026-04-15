@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Humidity Monitor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Smart Greenhouse Panel</p>
+        <h1>Plant Humidity Dashboard</h1>
+        <p class="subtitle">Track every potted plant in one glance, with rich detail and trend visibility.</p>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-card">
+          <span class="meta-label">Refresh Interval</span>
+          <strong>Every 30 Minutes</strong>
+        </div>
+        <div class="meta-card">
+          <span class="meta-label">Data Source</span>
+          <strong><span id="dataModeBadge">Mock Data</span></strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="stats-row">
+      <article class="stat-card">
+        <span>Total Plants</span>
+        <h2 id="totalPlants">0</h2>
+      </article>
+      <article class="stat-card">
+        <span>Average Humidity</span>
+        <h2 id="avgHumidity">0%</h2>
+      </article>
+      <article class="stat-card">
+        <span>Healthy Status</span>
+        <h2 id="healthyCount">0</h2>
+      </article>
+      <article class="stat-card">
+        <span>Last Updated</span>
+        <h2 id="lastUpdated">--</h2>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-title-row">
+        <h3>Live Plant Cards</h3>
+        <button class="refresh-btn" id="refreshBtn">Refresh Now</button>
+      </div>
+      <div class="plant-grid" id="plantGrid"></div>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel">
+      <button class="close-btn" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-top">
+        <img id="modalImage" src="" alt="Plant image" />
+        <div class="modal-info">
+          <h3 id="modalName"></h3>
+          <p id="modalDesc"></p>
+          <div class="tag-row">
+            <span class="tag" id="modalSpecies"></span>
+            <span class="tag" id="modalIdealHumidity"></span>
+            <span class="tag" id="modalCurrentHumidity"></span>
+          </div>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <h4>Humidity History</h4>
+        <div class="chart-container">
+          <canvas id="humidityChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
