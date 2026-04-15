@@ -8,8 +8,8 @@ import network
 import requests
 
 # ====================== 配置区（请严格填写！）======================
-WIFI_SSID = "小蜜蜂iPhone"          # 仅支持2.4G Wi-Fi，区分大小写
-WIFI_PASSWORD = "yyf050413"     # 区分大小写，不要有多余空格
+WIFI_SSID = "小蜜蜂iPhone" # 仅支持2.4G Wi-Fi，区分大小写
+WIFI_PASSWORD = "yyf050413" # 区分大小写，不要有多余空格
 SERVER_URL = "http://172.20.10.3:5000/upload_temp"
 # ====================================================================
 
