@@ -103,3 +103,8 @@ We have successfully deployed OpenClaw on both **DingTalk Enterprise Edition** a
 - **Individual user access** (WeChat Personal)
 - **Natural-language interaction**
 - **Real-time data queries**
+
+
+## how to use
+- server: python server.py then hardware run
+- frontend: python -m http.server 5501
